@@ -1,0 +1,17 @@
+w = 4000;  % 总宽度
+l = 4000;  % 总长度
+B = 20*(10^6);
+Alpha = 2.01;
+density = 0.012;
+% h = 100;
+D = 2*(10^6);
+noise = -146;  % dbm/HZ
+noise = 10^(noise/10)*B;
+P = 30;  % dbm
+P = 10^(P/10);
+d0 = 1;
+K = 10^(-4.64);
+threshold = 15;
+distance_max = (P*K/(threshold*noise))^(1/Alpha)*d0;
+h_max = 110;
+h_min = 50;
